@@ -49,7 +49,7 @@
                             null, '".$nama."')");
                     if($insert){
                         echo '<script> alert("Tambah data berhasil")</script>';
-                        echo '<script> window.location="datakategori.php"</script>';
+                        echo '<script> window.location="kategori-data.php"</script>';
                     } else{
                         echo 'gagal' .mysqli_error($conn);
                     }

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,29 +26,79 @@
       </div>
     </nav>
 
+    <div class="jumbotron jumbotron-fluid" 
+          style="background-image: url(img/kontak.jpg);" id="jumbo-kontak" >
 
-    <div class="jumbotron jumbotron-fluid" id="jum-contact">
-        <div class="container" id="kelas">
-          <div class="row">
-            <div class="col">
-              <h4>Our Email</h4>
-              skmadvertising@gmail.com
+          <div>
+            <div class="d-flex justify-content-center">
+              <div class="row">
+                <div class="col order-last" id="col1">
+                  <h2>Social Media</h2>
+                  <hr>
+                  <div class="sosmed" style=" margin: auto;
+                    width: 80%; height:80%;;
+                    ; ">
+                  <table style="margin:auto">
+                    <tr style="padding-top: 50px;">
+                      <td>
+                      <a href="https://instagram.com/yearrysugiharto">
+                      <img src="img/ig.png" alt="" width="50px"></td>
+                      </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> <h5> @yearrysugiharto</h5> </td>
+                    </tr>
+
+                    <tr style="margin-top:50px;">
+                      <td>
+                      <a href="https://www.facebook.com/yearry.sugiharto">  
+                      <img src="img/fb.png" alt="" width="50px"></td>
+                      </a>
+                    </tr>
+                    <tr>
+                      <td style="margin-top: 50px;"> <h5>Yearry Sugiharto</h5> </td>
+                    </tr>
+                  </table>
+                  </div>
+
+                  
+                </div>
+                <div class="col" id="col1">
+                  <h2> Email & Telepon</h2>
+                  <hr>
+                  <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmlllGjqJGkXQLKKmGNcpVJTDpFDWcHnhmzQtdNlKpQkcnbsKWQbPspRNGSwBClzqZFFDr">
+                  <img src="img/emailme.png" alt="" width="250px">
+                  </a>
+
+                  <h5 style="margin-top: 20px;">skmadv@gmail.com</h5>
+                  <h5 style="margin-top: 10px;"> (0230) 231405</h5>
+                  <h5 style="margin-top:25px"> Workshop :</h5>
+                  <h6>Jl. Karang Mulya No.26 Drajat, Kota Cirebon</h6>
+                  
+                </div>
+                <div class="col order-first" id="col1" >
+                  <h2>WhatsApp</h2>
+                  <hr>
+                  <img src="img/waqr.png" alt="QR">
+                  <h6>Scan Disini</h6>
+                  <h5>atau</h5>
+                  <a href="https://api.whatsapp.com/send?phone=6287829608110&text=Halo%2C%20saya%20ingin%20mengetahui%20info%20lebih%20lanjut%20tentang%20jasa%20yang%20diberikan%20Saka%20Karya%20Maju%20Advertising">
+                    <img src="img/chatme.png" alt="" width="250px">
+                  </a>
+                  
+                </div>
+              </div>
             </div>
-            <div class="col">
-             <h4>Our Social Media</h4>
-              Column
-            </div>
-            <div class="col">
-              <h4>Call Us</h4>
-              Column
+
+
             </div>
           </div>
-        </div>
-</div>
 
+    <div class="container">
 
-
-
+    </div>
+    </div>
 
 
 

@@ -38,6 +38,8 @@ a {
     padding: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
+	border: 1px solid #e0e0d1;
+	border-radius: 20px;
 }
 
 .btn {
@@ -185,20 +187,7 @@ header ul li a {
 	font-weight: 100;
 	line-height: 25px;
 }
-button{
-	width: 200px;
-	padding: 15px 0;
-	text-align: center;
-	margin: 20px 10px;
-	border-radius: 25px;
-	font-weight: bold;
-	border: 2px solid #ffff00;
-	background: transparent;
-	color: #fff;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-}
+
 span{
 	background: #ffff00;
 	height: 100%;
@@ -359,6 +348,7 @@ textarea{
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	border-radius: 25px;
 	margin-right: 30px;
+	margin-top: 50px;
 	
 }
 
@@ -380,8 +370,8 @@ textarea{
 }
 
 .harga {
+	font-size: large;
 	height: 10px;
-	font-weight: bold;
 	color:#f08519 ;
 }
 
@@ -569,4 +559,31 @@ padding-left: 45px;
 		width: fit-content;
 		height: fit-content;
 		margin-bottom: 20px;
+}
+
+.container-grid {
+	margin-top: 45px;
+}
+
+.form-control {
+	border-radius: 20px;
+}
+
+#dis {
+	background-color: #e0e0d1;
+}
+
+#produk_nama {
+	background-color: white;
+	border: none;
+}
+
+#tbp {
+	background-color: white;
+	border: none;
+}
+
+#tbk {
+	background-color: white;
+	border: none;
 }

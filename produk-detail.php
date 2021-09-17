@@ -1,6 +1,5 @@
 <?php
   include 'db.php';
-  error_reporting(0);
   
   $produk = mysqli_query($conn, "SELECT * FROM d_produk WHERE produk_id = '".$_GET['id']."' ");
   $p = mysqli_fetch_object($produk);
@@ -57,28 +56,13 @@
             <li class="nav-item">
 
                 <a class="nav-link active">Detail</a>
-            </li></ul>
+                
+            </li>
+            </ul>
 
-        <p> <?php echo $p->produk_deskripsi ?></p>
+                <p> <?php echo $p->produk_deskripsi ?></p>
         
     </div>
-
-    <div class="pesan">
-    <h3 style="text-align: left; padding-left: 60px; font-weight:bold"> Ketentuan Pemesanan</h3>
-        <p style="text-align: left; padding-left: 60px;"> [text] Ketentuan Pemesanan</p>
-
-        <?php
-         include 'db.php';
-          $produk = mysqli_query($conn, "SELECT * FROM d_produk ORDER BY produk_id ASC");
-          while($row = mysqli_fetch_array($produk)){
-          ?>
-        <a href="produk-form.php?pr=<?php echo $row['produk_id'] ?>">
-        <div style="text-align: left; padding-left: 60px;">
-        <input type="button" class="button-pesan" value="Isi Form">
-        </div>
-        </a>
-        <?php } ?>
-
         </div>
     </div>
 

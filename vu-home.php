@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,26 +55,38 @@
     </div>
   </div>
 
+  <div>
+    <h1 style="text-align: left; padding-left:85px; font-family: Brush Script MT, cursive;font-size:100px">Why Choose Us?</h1>
+    <div class="row">
+      <div class="col-sm">
+        <img src="img/home-why.png" alt="" width="560px">
+      </div>
+      <div class="col-sm">
+        <p style="padding-top: 50px;"> 
+          Kami berkomitmen untuk membantu dan melayani kebutuhan advertising Anda, semua dikerjakan secara online. Tanpa perlu datang dan menunggu yang membuang waktu, 
+        tanpa mengeluarkan biaya transportasi. Cukup hubungi kami, kami yang akan mengerjakan semua.
+        </p>
+        <p>
+        Produk advertising akan terpasang di depan tempat usaha dan menjadi
+         media promosi jangka panjang yang tepat. Dengan membuat signage di Alegra Advertising,
+          kami selalu membuat dari bahan
+         yang berkualitas dan mudah dalam perawatannya, sehingga signage Anda akan lebih tahan lama.
+        </p>
+      </div>
 
-  <div class="container" id="pdashboard">
-    <div class="row justify-content-center">
-      <div class="col-6" id="div-img">
-        <img src="img/assets/skm_gatau1.jpg" id="img" alt="image" width="500px" height="500px">
-      </div>
-      <div class="col-6">
-        <img src="img/assets/skm_arkem.jpg" id="img" alt="image" width="500px" height="500px">
-      </div>
-    </div>
+
   </div>
-
-    <div class="container" id="pdashboard">
-    <div class="row justify-content-center">
-      <div class="col-6">
-        <img src="img/assets/skm_stp.jpg" id="img" alt="image" width="500px" height="500px">
-      </div>
-      <div class="col-6">
-        <img src="img/assets/skm2.jpg" id="img" alt="image" width="500px" height="500px">
-      </div>
+  <div>
+    <div class="grid-container">
+      <div class="grid-item"><img src="img/yogya.png" alt="" width="150px"></div>
+      <div class="grid-item"><img src="img/honda.png" alt="" width="150px"></div>
+      <div class="grid-item"><img src="img/kopikita.png" alt="" width="300px"></div>  
+      <div class="grid-item"><img src="img/kopiulon.png" alt="" width="200px"></div>
+      <div class="grid-item"><img src="img/chunkee.jpg" alt="" width="180px"></div>
+      <div class="grid-item"><img src="img/kalul.jpg" alt="" width="200px"></div>  
+      <div class="grid-item"><img src="img/tongji.jpg" alt="" width="200px"></div>
+      <div class="grid-item"><img src="img/meo.png" alt="" width="250px"></div>
+      <div class="grid-item" style="padding-top: 60px;"><img src="img/jne.png" alt="" width="200px"></div>  
     </div>
   </div>
 

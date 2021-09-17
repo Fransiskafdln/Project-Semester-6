@@ -1,8 +1,10 @@
 <?php
   include 'db.php';
-  error_reporting(0);
 
-?>
+  if($_GET['kat'] != ''){
+    $where = " AND kategori_id LIKE '%" .$_GET['kat']. "%' ";
+  }
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
-  <title>Home</title>
+  <title>Produk SKM Adv</title>
 </head>
 
 <body>
@@ -35,19 +37,26 @@
 
   <!-- Produk -->
 
+
+
   <div class="section">
-    <div class="container" id="container-produk">
-      <div class="box">
-      <h3>PRODUK</h3>
-        <?php
-            if($_GET['kat'] != ''){
-              $where = " AND kategori_id LIKE '%" .$_GET['kat']. "%' ";
-            }
-          $produk = mysqli_query($conn, "SELECT * FROM d_produk WHERE produk_status = 1 $where  ORDER BY produk_id DESC");
+  <div class="judulkategori" style="height:50px; margin-top:50px;
+        ">
+
+        <h1 style="font-family: cursive;">NEON BOX</h1>
+          
+        </div>
+
+
+    <div class="container" id="container-produk" >
+      <?php
+
+          $produk = mysqli_query($conn, "SELECT * FROM d_produk LEFT JOIN d_kategori USING (kategori_id) WHERE produk_status = 1 $where  ORDER BY produk_id DESC");
           if(mysqli_num_rows($produk) > 0) {
             while($p = mysqli_fetch_array($produk)){
         ?>
-        <div class="col-4">
+
+        <div class="col-4" >
           <div class="img">
           <img src="produk/<?php echo $p['produk_img']?>" alt="">
           </div>
@@ -61,7 +70,11 @@
           </div>
           
           <a  href="produk-detail.php?id=<?php echo $p['produk_id'] ?>">
-          <button class="btn-detail">Detail</button>
+          <button class="btn-detail" style="background-color:#ffc107;color:black;margin-top:15px;margin-left: 5px;width:min-content; height:40px; text-align:center">Detail</button>
+          </a>
+
+          <a  href="produk-form.php?id=<?php echo $p['produk_id'] ?>">
+          <button class="btn-detail" style="margin-top:15px;margin-left: 5px;width:min-content; height:40px; text-align:center">Order</button>
           </a>
               
         </div>
@@ -69,7 +82,6 @@
           <p> Produk Tidak Ada</p>
         <?php } ?>
         </div>
-    </div>
   </div>
 
 

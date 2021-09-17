@@ -24,7 +24,7 @@
             <li> <a href="dashboard.php">Dashboard</a></li>
             <li> <a href="pesanan.php">Pesanan</a></li>
             <li> <a href="kategori-data.php">Data Kategori</a></li>
-            <li> <a href="produk-data">Data Produk</a></li>
+            <li> <a href="produk-data.php">Data Produk</a></li>
             <li> <a href="keluar.php">Logout</a></li>
         </ul>
      </div>

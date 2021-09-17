@@ -1,7 +1,5 @@
 <?php
   include 'db.php';
-  error_reporting(0);
-  
   $produk = mysqli_query($conn, "SELECT * FROM d_produk WHERE produk_id = '".$_GET['id']."' ");
   $p = mysqli_fetch_object($produk);
 ?>
@@ -21,7 +19,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
-  <title>Home</title>
+  <title>Form Pemesanan</title>
 </head>
 
 <body class="form-pemesanan">
@@ -38,126 +36,156 @@
 
 <div class="container-form">
     <div class="boxform">
-        <h1 class="h1-form"> Form Pemesanan</h1>
-
-        <div class="kolom2">
-        <table >
-            <tr>
-            <td class="ket"> Nama Lengkap </td>
-            <td style="padding-right: 10px;">  : </td>
-            <td>
-            <input class="form-control form-control-sm" type="text" >
-            </td>
-            </tr>
-
-            <tr>
-            <td class="ket"> No telepon/hp </td>
-            <td style="padding-right: 10px;">  : </td>
-            <td><input class="form-control form-control-sm" type="text"></td>
-            </tr>
-
-            <tr>
-            <td class="ket"> Email </td>
-            <td style="padding-right: 10px;"> : </td>
-            <td><input class="form-control form-control-sm" type="text"></td>
-            </tr>
-
-            <tr>
-            <td class="ket"> Alamat Pemasangan Jasa </td>
-            <td style="padding-right: 10px;">  : </td>
-            <td><input class="form-control form-control-sm" type="text" ></td>
-            </tr>
-
-            <tr>
-            <td class="ket"> Foto KTP </td>
-            <td style="padding-right: 10px;"> : </td>
-            <td><input type="file" class="form-control-file" id="exampleFormControlFile1"></td>
-            </tr>
-        </table>
-
+        <h1 class="h1-form"> Form Pemesanan</h1> 
+        <h2 name="harga"style="float:right; font-weight:bold; color:#F08519"> Rp <?php echo  number_format($p->produk_harga) ?></h2>
         
+          
+          <form action="form-simpan.php" method="POST" enctype="multipart/form-data">
+          <h5 class="judul_produk" name="produk_nama" style="color: white;"> 0
+            <?php
+              include 'db.php';
 
-        </div>
-        <div class="kolom2"> 
-        <table >
-            <tr>
-            <td class="ket"> File Desain </td>
-            <td  style="padding-right: 10px;">  : </td>
-            <td> <input type="file" class="form-control-file" id="exampleFormControlFile1"></td>
-            </tr>
+              $produk = mysqli_query($conn, "SELECT * FROM d_produk WHERE produk_id = '".$_GET['id']."' ");
+              $p = mysqli_fetch_object($produk);
+            ?>
+              <input style="float:left; width:500px" type="text" name="produk_nama" value="#<?php echo $p->produk_nama?>" readonly>
+              </h5>
+          <div class="container-grid">
+            <div class="row">
+              
 
-            <tr>
-            <td class="ket">Pengiriman </td>
-            <td  style="padding-right: 10px;">  : </td>
-            <td>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Kirim</label>
+              <div class="col">
+                   <div class="form-group row" >
+                    <label for="produk_nama" class="col-sm-4 col-form-label">Nama Produk</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="produk_nama"class="form-control form-control-sm" id="produk_nama" value=" <?php echo $p->produk_nama ?>" readonly>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <label for="nama_lengkap" class="col-sm-4 col-form-label">Nama Lengkap</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="nama_lengkap"class="form-control form-control-sm" id="nama_lengkap" >
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="no_tlp" class="col-sm-4 col-form-label">Nomor Telepon/HP</label>
+                    <div class="col-sm-8">
+                      <input type="number" name="no_tlp" class="form-control form-control-sm" id="np_tlp" >
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="email" class="col-sm-4 col-form-label">Email</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="email" class="form-control form-control-sm" id="email" >
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="keterangan" class="col-sm-4 col-form-label">Keterangan</label>
+                    <div class="col-sm-8">
+                    <textarea class="form-control" name="alamat_pemasangan" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </div> 
+
+                  </div>
+
+                <div class="col"> 
+
+                <div class="form-group row">
+                    <label for="alamat_pemasangan" class="col-sm-4 col-form-label">Alamat Pemasangan Jasa</label>
+                    <div class="col-sm-8">
+                    <textarea class="form-control" name="alamat_pemasangan" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </div> 
+               
+               <div class="form-group row">
+                  <label for="kota" class="col-sm-4 col-form-label">Kota</label>
+                  <div class="col-sm-8">
+                    <select class="form-control form-control-sm" name="kota">
+                      <option>Pilih Kota</option>
+                      <option value="Cirebon">Cirebon</option>
+                      </select>
+                  </div>
                 </div>
-                <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Kirim+ Pasang</label>
+                
+                <div class="form-group row">
+                  <label for="kecamatan" class="col-sm-4 col-form-label">Kecamatan</label>
+                  <div class="col-sm-8">
+                  <select class="form-control form-control-sm" name="kecamatan">
+                    <option >Pilih Kecamatan</option>
+                    <option value="Kecamatan Harjamukti" >Kecamatan Harjamukti</option>
+                    <option value="Kecamatan Kesambi" >Kecamatan Kesambi</option>
+                    <option value="Kecamatan Kejaksan" >Kecamatan Kejaksan</option>
+                    <option value="Kecamatan Pekalipan" >Kecamatan Pekalipan</option>
+                    <option value="Kecamatan Lemahwungkuk" >Kecamatan Lemahwungkuk</option>
+                    </select>
+                  </div>
                 </div>
-            </td>
-            </tr>
 
-            <tr>
-            <td class="ket"> Kota </td>
-            <td  style="padding-right: 10px;">  : </td>
-            <td>
-                <select class="form-control form-control-sm">
-                <option>Pilih Kota</option>
-                </select>
-            </td>
-            </tr>
+                <div class="form-group row">
+                  <label for="tbp" class="col-sm-4 col-form-label">Ongkos Kirim</label>
+                  <div class="col-sm-8"> 
+                  <input type="text" name="tbp" class="form-control form-control-sm" id="tbp" value="Rp 
+                  <?php 
+                  include 'db.php';
 
-            <tr>
-            <td class="ket"> Kecamatan</td>
-            <td  style="padding-right: 10px;">  : </td>
-            <td> 
-                <select class="form-control form-control-sm">
-                <option>Pilih Kecamatan</option>
-                </select></td>
-            </tr>
-        </table>
-        
-        <a href="">
-            <button class="btn-hitung">
-                Hitung Biaya Kirim 
-            </button>
-        </a>
-        <div class="total">
-        <table>
-        <tr>
-            <td class="ket"> Total Biaya Pengiriman</td>
-            <td  style="padding-right: 10px;">  : </td>
-        </tr>
+                  $produk = mysqli_query($conn, "SELECT * FROM d_produk WHERE produk_id = '".$_GET['id']."' ");
+                  $p = mysqli_fetch_object($produk);
 
-        <tr>
-            <td class="ket"> Total Biaya Keseluruhan</td>
-            <td  style="padding-right: 10px;">  : </td>
-        </tr>
-        </table>
-        </div>
-        </div>
-        
-      </div>
-      <div class="div-submit" ">
-      <a href="">
-            <button class="btn-submit "style="background-color:#007bff ;">
-                Submit
-            </button>
-        </a>
-      <a href="">
-            <button class="btn-submit">
-                Reset
-            </button>
-      </a>
-        </div>
-      
-        
-    
-</div>
+                  $a = 1;
+
+                  if($a != 1 ){
+                    echo 'whe';
+                  } else {
+                    print number_format($p->produk_harga -($p->produk_harga * (95/100)));
+                  }
+                  
+                  ?>
+                  " readonly>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="tbk" class="col-sm-4 col-form-label">Total Biaya Keseluruhan</label>
+                  <div class="col-sm-8"> 
+                  <input type="text" name="tbk" class="form-control form-control-sm" id="tbk"  style="color:#f08519; font-weight:bold; font-size:large"
+                  value="Rp <?php 
+                        include 'db.php';
+
+                        $produk = mysqli_query($conn, "SELECT * FROM d_produk WHERE produk_id = '".$_GET['id']."' ");
+                        $p = mysqli_fetch_object($produk);
+
+                        $a = 2;
+                        if ($a != 2){
+                          echo 'd';
+                        } else {
+                          print number_format($p->produk_harga + $p->produk_harga -($p->produk_harga * (95/100)) );
+                        }
+                        ?>" readonly >
+                  </div>
+                </div>  
+                </div>
+                </div>
+
+                  
+                <div class="form-group row">
+                  <div class="col-sm-12" style="height: 15px;" >
+                   <button type="submit" name="submit" class="btn btn-info" style="float: right;">Submit </button>
+                  </div>
+                </div>
+                 
+              </form>  
+              
+
+
+            </div>
+          </div>
+          </form>  
+          
+                  
 
 
 

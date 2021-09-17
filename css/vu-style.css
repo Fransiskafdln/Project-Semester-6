@@ -168,3 +168,75 @@ h5 {
 	display: flex;
 }
 
+.boxcontact {
+	margin: auto;
+	width: 100%;
+	border: 3px solid green;
+	padding: 10px;
+}
+
+#jumbo-kontak {
+	height: 666px;
+	background-size: cover;
+	background-position: center;
+}
+
+.form{
+    width: 250px;
+    line-height:35px;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 5px;
+    outline-style: none;
+    border: none;
+    border-radius: 50px 0px 0px 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+.form::placeholder{
+    color: slategrey ;
+
+}
+
+#col1 {
+	text-align: center;
+	margin-top: 120px;
+	width: 450px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+	background-color: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(6px);
+	border-radius: 50px;
+	-webkit-backdrop-filter: blur(6px);
+	height: 400px;
+}
+
+.row {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/* HOME NEWWWWW */
+.boxhome {
+	border: 1px solid;
+	width: 300px;
+	height: 300px;
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	background-color: white;
+	padding: 10px;
+  }
+  .grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+  }
